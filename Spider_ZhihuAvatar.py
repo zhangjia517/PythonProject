@@ -7,6 +7,7 @@ from time import sleep
 
 def main():
     url = 'https://www.zhihu.com/question/22591304/followers'
+    # url = 'https://www.zhihu.com/question/27364360'
     headers = {
         'Accept': 'text/html, application/xhtml+xml, image/jxr, */*',
         'Accept-Encoding': 'gzip, deflate',
