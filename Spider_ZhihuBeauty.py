@@ -14,7 +14,7 @@ headers = {
 }
 
 
-def save(text, filename='temp', path='D:\\bs4\\zhihu\\new\\'):
+def save(text, filename='temp', path='E:\\Spider\\ZhiHu\\Beauty\\'):
     fpath = os.path.join(path, filename)
     with open(fpath, 'wb') as f:
         print('output:', fpath)
@@ -33,11 +33,11 @@ def crawl(url):
     page = resp.content
     print(page)
     root = html.fromstring(page)
-    
+
     image_urls = root.xpath('//img[@data-original]/@data-original')
     print(image_urls)
-    # for image_url in image_urls:
-    #     save_image(image_url)
+    for image_url in image_urls:
+        save_image(image_url)
 
 
 if __name__ == '__main__':

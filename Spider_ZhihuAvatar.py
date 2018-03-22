@@ -30,7 +30,7 @@ def main():
         try:
             img = img.replace('\\', '')
             pic = img+'.jpg'
-            path = 'd:\\bs4\\zhihu\\jpg\\'+str(i)+'.jpg'
+            path = 'E:\\Spider\\ZhiHu\\Avatar\\'+str(i)+'.jpg'
             urllib.request.urlretrieve(pic, path)
             print('下载成功')
             i += 1
