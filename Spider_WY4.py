@@ -19,8 +19,8 @@ r = requests.get(
 
 arr = r.json()['result']['tracks']
 
-for i in range(2):
-    name = str(i+1) + '_' + arr[i]['name'] + '.jpg'
+for i in range(20):
+    name = str(i+1).zfill(3) + '_' + arr[i]['name'] + '.jpg'
     link = arr[i]['album']['picUrl']
     urllib.request.urlretrieve(link, 'E:\\Spider\\WY4\\' + name)
     print(name+'下载完成')
